@@ -1,4 +1,4 @@
-module gitlab.lnamphp.com/tsingroo/mexc-perpetual-api
+module github.com/testzhaoxiaofei/mexc-perpetual-api-master
 
 go 1.23
 
