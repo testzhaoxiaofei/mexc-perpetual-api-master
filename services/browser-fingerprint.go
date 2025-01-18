@@ -3,8 +3,8 @@ package services
 import (
 	"encoding/json"
 
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/models"
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/utils"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/models"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/utils"
 )
 
 func getFingetprint(mToken, memeberId string) (*models.MexcBrowserFingerprint, error) {

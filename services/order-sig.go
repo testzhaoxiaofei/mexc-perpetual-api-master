@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/models"
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/utils"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/models"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/utils"
 )
 
 // 生成订单的签名字段

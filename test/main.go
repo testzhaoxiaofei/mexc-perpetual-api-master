@@ -3,8 +3,8 @@ package main
 import (
 	"log/slog"
 
-	mexcperpetualapi "gitlab.lnamphp.com/tsingroo/mexc-perpetual-api"
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/utils"
+	mexcperpetualapi "github.com/testzhaoxiaofei/mexc-perpetual-api-master"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/utils"
 )
 
 func main() {

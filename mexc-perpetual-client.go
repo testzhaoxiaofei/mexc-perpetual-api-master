@@ -13,9 +13,9 @@ import (
 	fhttp "github.com/bogdanfinn/fhttp"
 	tls_client "github.com/bogdanfinn/tls-client"
 	"github.com/bogdanfinn/tls-client/profiles"
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/models"
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/services"
-	"gitlab.lnamphp.com/tsingroo/mexc-perpetual-api/utils"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/models"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/services"
+	"github.com/testzhaoxiaofei/mexc-perpetual-api-master/utils"
 )
 
 type MexcPerpetualClient struct {
