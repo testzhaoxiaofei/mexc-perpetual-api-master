@@ -101,7 +101,7 @@ Hs87ewfu0FCK7lWdhjDZSDogWcwqDMXIQBvJ8p48roVZDUaCsd044ecvTBq7F/QG
 }
 
 func zuokong() {
-	COOKID_UID := "WEB8b8a6a5f47fd8b29c835d761b37f03708fea0956670cd7242ffeab58b25b1df8"
+	COOKID_UID := "WEB392a8e7f504ed5c94863eb882309e63f6b7e7320acc78c3436299e2eb2730cbf"
 	PROXY := "http://localhost:7890"
 	mpc, err := mexcperpetualapi.NewMexcPerpetualClient(COOKID_UID, PROXY)
 	if err != nil {
@@ -115,8 +115,22 @@ func zuokong() {
 	slog.Info("OpenKong return", "orderId", orderId)
 }
 
+func pingkong() {
+	COOKID_UID := "WEB392a8e7f504ed5c94863eb882309e63f6b7e7320acc78c3436299e2eb2730cbf"
+	PROXY := "http://localhost:7890"
+	mpc, err := mexcperpetualapi.NewMexcPerpetualClient(COOKID_UID, PROXY)
+	if err != nil {
+		panic(err)
+	}
+	orderId, err := mpc.CloseKong("FUEL_USDT", 2, 10)
+	if err != nil {
+		panic(err)
+	}
+	slog.Info("CloseKong return", "orderId", orderId)
+}
+
 func zuoduo() {
-	COOKID_UID := "WEB8b8a6a5f47fd8b29c835d761b37f03708fea0956670cd7242ffeab58b25b1df8"
+	COOKID_UID := "WEB392a8e7f504ed5c94863eb882309e63f6b7e7320acc78c3436299e2eb2730cbf"
 	PROXY := "http://localhost:7890"
 	mpc, err := mexcperpetualapi.NewMexcPerpetualClient(COOKID_UID, PROXY)
 	if err != nil {
@@ -128,4 +142,18 @@ func zuoduo() {
 		panic(err)
 	}
 	slog.Info("OpenDuo return", "orderId", orderId)
+}
+
+func pingduo() {
+	COOKID_UID := "WEB392a8e7f504ed5c94863eb882309e63f6b7e7320acc78c3436299e2eb2730cbf"
+	PROXY := "http://localhost:7890"
+	mpc, err := mexcperpetualapi.NewMexcPerpetualClient(COOKID_UID, PROXY)
+	if err != nil {
+		panic(err)
+	}
+	orderId, err := mpc.CloseDuo("FUEL_USDT", 2, 10)
+	if err != nil {
+		panic(err)
+	}
+	slog.Info("CloseDuo return", "orderId", orderId)
 }

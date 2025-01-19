@@ -2,7 +2,7 @@ package models
 
 type MexcOrderCreateReqeust struct {
 	Symbol        string  `json:"symbol"`
-	Side          int     `json:"side"` // 3:开空;1:开多
+	Side          int     `json:"side"` // 1:开多;2:平空;3:开空;4:平多
 	OpenType      int     `json:"openType"`
 	Type          string  `json:"type"`
 	Vol           float64 `json:"vol"`

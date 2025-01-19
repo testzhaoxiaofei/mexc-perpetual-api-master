@@ -101,6 +101,32 @@ func (mpc *MexcPerpetualClient) OpenDuo(symbol string, vol float64, leverage int
 	return mpc.submitPerpetualOrder(symbol, vol, leverage, OPEN_DUO_SIDE)
 }
 
+// 平空
+//
+// @param symbol 合约名称, 如ETH_USDT
+//
+// @param vol 数量
+//
+// @return 订单号
+func (mpc *MexcPerpetualClient) CloseKong(symbol string, vol float64, leverage int) (string, error) {
+	CLOSE_KONG_SIDE := 2
+
+	return mpc.submitPerpetualOrder(symbol, vol, leverage, CLOSE_KONG_SIDE)
+}
+
+// 平多
+//
+// @param symbol 合约名称, 如ETH_USDT
+//
+// @param vol 数量
+//
+// @return 订单号
+func (mpc *MexcPerpetualClient) CloseDuo(symbol string, vol float64, leverage int) (string, error) {
+	CLOSE_DUO_SIDE := 4
+
+	return mpc.submitPerpetualOrder(symbol, vol, leverage, CLOSE_DUO_SIDE)
+}
+
 func (mpc *MexcPerpetualClient) submitPerpetualOrder(symbol string, vol float64, leverage, side int) (string, error) {
 	// https://futures.mexc.com/api/v1/private/order/create?mhash=b2d52c26ce0879d5d704893fa6e026a6
 	if mpc.dolosConfig == nil || mpc.customerInfo == nil {
