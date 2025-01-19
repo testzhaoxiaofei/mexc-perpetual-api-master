@@ -1,6 +1,6 @@
 ### mexc-perpetual-api 抹茶交易所USDT永续合约逆向API
 
-##### 开空单示例
+##### 开空单示例1
 ```go
 package main
 
